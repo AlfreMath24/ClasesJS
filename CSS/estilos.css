@@ -177,3 +177,12 @@ h1 {
   border-color: black;
   color: white;
 }
+
+.seccion {
+  padding: 10px 50px;
+  margin: 10px 10px;
+}
+
+.datos {
+  padding: 20px 0;
+}

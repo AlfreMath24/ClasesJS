@@ -7,6 +7,15 @@ const shoppingCartItemsContainer = document.querySelector(
   ".shoppingCartItemsContainer"
 );
 
+let aux = localStorage.getItem(`shoppingCartItemsContainer`);
+
+if (!aux) {
+  shoppingCartItemsContainer = [];
+} else {
+  shoppingCartItemsContainer = JSON.parse(aux);
+  addItemToShoppingCart();
+}
+
 const comprarButton = document.querySelector(".comprarButton");
 comprarButton.addEventListener("click", comprarButtonClicked);
 
@@ -23,6 +32,7 @@ function addItemToShoppingCart(cardTitle, precio) {
   const elementsTitle = shoppingCartItemsContainer.getElementsByClassName(
     "shoppingCartItemTitle"
   );
+
   for (let i = 0; i < elementsTitle.length; i++) {
     if (elementsTitle[i].innerText === cardTitle) {
       let elementQuantity = elementsTitle[
@@ -55,11 +65,14 @@ function addItemToShoppingCart(cardTitle, precio) {
             class="shopping-cart-quantity d-flex justify-content-between align-items-center h-100 border-bottom pb-2 pt-3">
             <input class="shopping-cart-quantity-input shoppingCartItemQuantity" type="number"
                 value="1">
-            <button class="btn btn-danger buttonDelete" type="button">X</button>
+                <button class="btn btn-danger buttonDelete" type="button">X</button>
         </div>
     </div>
 </div>`;
-
+  localStorage.setItem(
+    `shoppingCartItemsContainer`,
+    JSON.stringify(shoppingCartItemsContainer)
+  );
   shoppingCartRow.innerHTML = shoppingCartContent;
   shoppingCartItemsContainer.append(shoppingCartRow);
 
@@ -100,6 +113,10 @@ function updateShoppingCartTotal() {
 function removeShoppingCartItem(event) {
   const buttonClicked = event.target;
   buttonClicked.closest(".shoppingCartItem").remove();
+  localStorage.setItem(
+    `shoppingCartItemsContainer`,
+    JSON.stringify(shoppingCartItemsContainer)
+  );
   updateShoppingCartTotal();
 }
 

@@ -363,19 +363,73 @@
                 </div>
                 <div class="toast-body text-white">Se aumentó cantidad</div>
               </div>
-              <button
-                class="btn btn-success comprarButton"
-                type="button"
-                data-toggle="modal"
-                data-target="#comprarModal"
-              >
-                Comprar
-              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
+    <div class="seccion">
+      <h3 class="text-center">Ingrese sus datos para finalizar compra</h3>
+      <form class="row g-3 datos">
+        <div class="col-md-6">
+          <label for="inputEmail4" class="form-label">Nombre</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputnombre4"
+            placeholder="Nombre"
+          />
+        </div>
+        <div class="col-md-6">
+          <label for="inputapellido4" class="form-label">Apellido</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputapellido4"
+            placeholder="Apellido"
+          />
+        </div>
+        <div class="col-12">
+          <label for="inputAddress" class="form-label">Direccion</label>
+          <input
+            type="text"
+            class="form-control"
+            id="inputAddress"
+            placeholder="Calle"
+          />
+        </div>
+        <div class="col-12">
+          <label for="inputAddress2" class="form-label">Altura</label>
+          <input type="text" class="form-control" id="inputAddress2" />
+        </div>
+        <div class="col-md-8">
+          <label for="inputCity" class="form-label">Barrio</label>
+          <input type="text" class="form-control" id="inputCity" />
+        </div>
+        <div class="col-md-4">
+          <label for="inputState" class="form-label">Provincia</label>
+          <select id="inputState" class="form-select">
+            <option selected>Choose...</option>
+            <option>Capital Federal</option>
+            <option>Buenos Aires</option>
+            <option>La Pampa</option>
+            <option>Entre Rios</option>
+            <option>Santa Fe</option>
+            <option>Cordoba</option>
+          </select>
+        </div>
+        <div class="col-6">
+          <button
+            class="btn btn-success comprarButton"
+            type="button"
+            data-toggle="modal"
+            data-target="#comprarModal"
+          >
+            Comprar
+          </button>
+        </div>
+      </form>
+    </div>
     <section class="modal">
       <div class="modal_container">
         <h2 class="modal_title">¡Gracias por tu compra!</h2>
