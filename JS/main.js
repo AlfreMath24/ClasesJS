@@ -1,9 +1,22 @@
 const Clickbutton = document.querySelectorAll(".addToCart");
+
 const boxCompra = document.querySelector(".shoppingCartItemsContainer");
+
 let shoppingCartItemsContainer = [];
 
 Clickbutton.forEach((btn) => {
   btn.addEventListener("click", addToCarritoItem);
+  btn.addEventListener("click", () => {
+    swal.fire({
+      text: "Se ha agregado el producto con exito!",
+      icon: "success",
+      timer: "2000",
+      background: "rgba(149, 166, 138, 1)",
+      toast: true,
+      position: "top-end",
+      showConfirmButton: false,
+    });
+  });
 });
 
 function addToCarritoItem(e) {
@@ -73,6 +86,19 @@ function renderCarrito() {
     div
       .querySelector(".buttonDelete")
       .addEventListener("click", removeItemCarrito);
+
+    div.addEventListener("click", () => {
+      swal.fire({
+        text: "Se ha eliminado producto del carrito!",
+        icon: "error",
+        timer: "2000",
+        background: "rgba(149, 166, 138, 1)",
+        toast: true,
+        position: "top-end",
+        showConfirmButton: false,
+      });
+    });
+
     div
       .querySelector(".shoppingCartItemQuantity")
       .addEventListener("change", sumaCantidad);
@@ -143,22 +169,20 @@ window.onload = function () {
   }
 };
 
+const comprar = document.querySelector(".comprarButton");
+
+comprar.addEventListener("click", () => {
+  swal.fire({
+    title: "Gracias!",
+    text: "Se ha realizado la compra con exito!",
+    icon: "success",
+    background: "rgba(149, 166, 138, 1)",
+    button: "rgba(145, 95, 44, 0.5)",
+  });
+});
+
 function comprarButtonClicked() {
   shoppingCartItemsContainer.innerHTML = "";
 
   CarritoTotal();
 }
-
-const openModal = document.querySelector(`.comprarButton`);
-const modal = document.querySelector(`.modal`);
-
-openModal.addEventListener(`click`, (e) => {
-  e.preventDefault();
-  modal.classList.add(`modal_show`);
-});
-
-closeModal.addEventListener(`click`, (e) => {
-  e.preventDefault();
-  modal.classList.remove(`modal_show`);
-  Content.remove();
-});
