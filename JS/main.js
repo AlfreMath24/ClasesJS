@@ -1,3 +1,12 @@
+fetch("./productos.json")
+  .then((resInicial) => resInicial.json())
+  .then((resFinal) => {
+    console.log(resFinal);
+  })
+  .catch((e) => {
+    console.log(e);
+  });
+
 const Clickbutton = document.querySelectorAll(".addToCart");
 
 const boxCompra = document.querySelector(".shoppingCartItemsContainer");
@@ -186,3 +195,31 @@ function comprarButtonClicked() {
 
   CarritoTotal();
 }
+
+// class Producto {
+//   constructor(codigo, nombre, precio, categoria) {
+//     this.nombre = nombre;
+//     this.codigo = codigo;
+//     this.precio = precio;
+//     this.categoria = categoria;
+//   }
+//   mostrarse() {
+//     console.log(this.codigo, this.nombre, this.precio, this.categoria);
+//   }
+// }
+// let miArrayProducto = [];
+
+// async function fetchInicial() {
+//   const res = await fetch("./data.json");
+//   auxArray = await res.json();
+
+//   auxArray.forEach((item) => {
+//     miArrayProducto.push(
+//       new Producto(item.codigo, item.nombre, item.precio, item.categoria)
+//     );
+//   });
+
+//   miArrayProducto[0].mostrarse();
+// }
+
+// fetchInicial();

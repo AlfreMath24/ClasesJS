@@ -1,0 +1,94 @@
+[
+  {
+    "codigo": 1,
+    "nombre": "PlatosP Grass",
+    "precio": 1000,
+    "categoria": "Platos de Sitio"
+  },
+  {
+    "codigo": 2,
+    "nombre": "PlatoP Water Color",
+    "precio": 1000,
+    "categoria": "Platos de Sitio"
+  },
+  {
+    "codigo": 3,
+    "nombre": "PatosP Wild Map",
+    "precio": 1100,
+    "categoria": "Platos de Sitio"
+  },
+  {
+    "codigo": 4,
+    "nombre": "PlatoP Christmas",
+    "precio": 1100,
+    "categoria": "Platos de Sitio"
+  },
+  {
+    "codigo": 5,
+    "nombre": "PlatoP Tropical",
+    "precio": 1000,
+    "categoria": "Platos de Sitio"
+  },
+
+  {
+    "codigo": 101,
+    "nombre": "Servilleta Molinos Arg",
+    "precio": 1500,
+    "categoria": "Mesa"
+  },
+  {
+    "codigo": 102,
+    "nombre": "Servilleta Golden Rose",
+    "precio": 1500,
+    "categoria": "Mesa"
+  },
+  {
+    "codigo": 103,
+    "nombre": "Servilleta Bethania",
+    "precio": 1400,
+    "categoria": "Mesa"
+  },
+  {
+    "codigo": 104,
+    "nombre": "Servilleta Puntilla",
+    "precio": 1200,
+    "categoria": "Mesa"
+  },
+  {
+    "codigo": 105,
+    "nombre": "Servilleta Lino Azul",
+    "precio": 1400,
+    "categoria": "Mesa"
+  },
+
+  {
+    "codigo": 201,
+    "nombre": "Paño Amsterdam",
+    "precio": 1200,
+    "categoria": "Cocina"
+  },
+  {
+    "codigo": 202,
+    "nombre": "Paño Jersey Habano",
+    "precio": 1300,
+    "categoria": "Cocina"
+  },
+  {
+    "codigo": 203,
+    "nombre": "Paño Cotton Oliva",
+    "precio": 1400,
+    "categoria": "Cocina"
+  },
+  {
+    "codigo": 204,
+    "nombre": "Paño Cotton Plomo",
+    "precio": 1400,
+    "categoria": "Cocina"
+  },
+  {
+    "codigo": 205,
+    "nombre": "Paño Cotton Beige",
+    "precio": 1400,
+    "categoria": " Cocina"
+  }
+]
