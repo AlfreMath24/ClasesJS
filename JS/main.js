@@ -189,37 +189,3 @@ comprar.addEventListener("click", () => {
     button: "rgba(145, 95, 44, 0.5)",
   });
 });
-
-function comprarButtonClicked() {
-  shoppingCartItemsContainer.innerHTML = "";
-
-  CarritoTotal();
-}
-
-// class Producto {
-//   constructor(codigo, nombre, precio, categoria) {
-//     this.nombre = nombre;
-//     this.codigo = codigo;
-//     this.precio = precio;
-//     this.categoria = categoria;
-//   }
-//   mostrarse() {
-//     console.log(this.codigo, this.nombre, this.precio, this.categoria);
-//   }
-// }
-// let miArrayProducto = [];
-
-// async function fetchInicial() {
-//   const res = await fetch("./data.json");
-//   auxArray = await res.json();
-
-//   auxArray.forEach((item) => {
-//     miArrayProducto.push(
-//       new Producto(item.codigo, item.nombre, item.precio, item.categoria)
-//     );
-//   });
-
-//   miArrayProducto[0].mostrarse();
-// }
-
-// fetchInicial();
